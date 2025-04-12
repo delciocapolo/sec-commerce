@@ -1,6 +1,6 @@
 <?php
-include "constants/global.php";
-include "components/Layout/header/index.php";
+include "src/constants/global.php";
+include "src/components/Layout/header/index.php";
 ?>
 
 <!DOCTYPE html>
@@ -15,12 +15,13 @@ include "components/Layout/header/index.php";
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
    <script src="//unpkg.com/alpinejs" defer></script>
-   <script src="lib/app.js" defer type="module"></script>
+   <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+   <script src="./src/lib/app.js" defer type="module"></script>
+   <link rel="stylesheet" href="./src/styles/index.css">
 </head>
 
 <body>
-   <main>
-
+   <main class="w-full bg-red-500">
    </main>
 
    <footer>
