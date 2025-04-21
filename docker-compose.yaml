@@ -1,0 +1,26 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: sec-commerce-db
+    restart: always
+    tty: true
+    volumes:
+      - volume-sec-commerce-db:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: sec-commerce
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_USER: root
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=sec-commerce-db
+    depends_on:
+      - mysql
+volumes:
+  volume-sec-commerce-db:
+    driver: local
