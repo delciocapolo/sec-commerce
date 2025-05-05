@@ -25,10 +25,11 @@ try {
    loadEnv(BASE_PATH . "/.env");
 
    $envs = [
-      'host' => $_ENV["DATABASE_HOST"],
-      'database_name' => $_ENV["DATABASE_NAME"],
-      'user' => $_ENV["DATABASE_USER"],
-      'password' => $_ENV["DATABASE_PASSWORD"]
+      'DATABASE_HOST' => $_ENV["DATABASE_HOST"],
+      'DATABASE_NAME' => $_ENV["DATABASE_NAME"],
+      'DATABASE_USER' => $_ENV["DATABASE_USER"],
+      'DATABASE_PORT' => $_ENV["DATABASE_PORT"],
+      'DATABASE_PASSWORD' => $_ENV["DATABASE_PASSWORD"]
    ];
 
    foreach ($envs as $key => $value) {

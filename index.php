@@ -1,6 +1,13 @@
 <?php
-include "src/constants/global.php";
-include "src/components/Layout/header/index.php";
+define("BASE_PATH", __DIR__);
+
+// CORE CONFIG
+require_once "src/api/config/environment.php";
+// require_once "src/api/config/database.php";
+
+// WEB CONFIG
+require_once "src/views/constants/global.php";
+require_once "src/views/components/index.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,21 +19,23 @@ include "src/components/Layout/header/index.php";
    <title><?= $COMPANY_NAME ?></title>
    <meta name="description" content="Uma plataforma para vendas de dispositivos de segurança.">
    <meta name="keywords" content="segurança, dispositivos, vendas, ecommerce">
-   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
    <script src="//unpkg.com/alpinejs" defer></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
-   <script src="./src/lib/app.js" defer type="module"></script>
-   <link rel="stylesheet" href="./src/styles/index.css">
+   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+   <script src="./src/views/lib/app.js" defer type="module"></script>
+   <link rel="stylesheet" href="./src/views/styles/index.css">
 </head>
 
 <body>
-   <main class="w-full bg-red-500">
-   </main>
 
-   <footer>
-      <p>&copy; 2023 Sec Commerce. Todos os direitos reservados.</p>
-   </footer>
+   <?php require_once "src/views/layout/header/index.php"; ?>
+
+   <?php require_once "src/routes/handler.php"; ?>
+
+   <?php require_once "src/views/layout/footer/index.php"; ?>
 
 </body>
 
