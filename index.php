@@ -1,10 +1,13 @@
 <?php
 define("BASE_PATH", __DIR__);
 
-require_once "src/constants/global.php";
+// CORE CONFIG
 require_once "src/api/config/environment.php";
 // require_once "src/api/config/database.php";
-require_once "src/components/index.php";
+
+// WEB CONFIG
+require_once "src/views/constants/global.php";
+require_once "src/views/components/index.php";
 ?>
 
 <!DOCTYPE html>
@@ -22,15 +25,17 @@ require_once "src/components/index.php";
    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-   <script src="./src/lib/app.js" defer type="module"></script>
-   <link rel="stylesheet" href="./src/styles/index.css">
+   <script src="./src/views/lib/app.js" defer type="module"></script>
+   <link rel="stylesheet" href="./src/views/styles/index.css">
 </head>
 
 <body>
 
-   <?php require_once "src/components/Layout/header/index.php"; ?>
-   <?php require_once "src/components/Layout/homepage/index.php"; ?>
-   <?php require_once "src/components/Layout/footer/index.php"; ?>
+   <?php require_once "src/views/layout/header/index.php"; ?>
+
+   <?php require_once "src/routes/handler.php"; ?>
+
+   <?php require_once "src/views/layout/footer/index.php"; ?>
 
 </body>
 

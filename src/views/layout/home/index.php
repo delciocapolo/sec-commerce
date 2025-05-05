@@ -1,20 +1,16 @@
 <?php
 $menus_header = [
    [
+      'label' => 'Quem somos',
+      'url' => '#about'
+   ],
+   [
       'label' => 'Nossos Serviços',
       'url' => '#services'
    ],
    [
-      'label' => 'Sensores',
-      'url' => '/products/sensors'
-   ],
-   [
-      'label' => 'Entrar em Contacto',
-      'url' => 'tel:+244972792320'
-   ],
-   [
-      'label' => 'Câmeras',
-      'url' => '/products/camera'
+      'label' => 'Nossos Produtos',
+      'url' => '#products'
    ]
 ];
 
@@ -132,6 +128,4 @@ $services = [
          </div>
       </div>
    </section>
-
-   <!-- FOOTER -->
 </main>

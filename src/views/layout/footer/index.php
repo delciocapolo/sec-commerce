@@ -30,12 +30,8 @@ $supports = [
 
 $quickMenu = [
    [
-      'url' => '/contactar-nos',
-      'label' => 'Contactar-nos'
-   ],
-   [
-      'url' => '/faq',
-      'label' => 'Perguntas Frequentes'
+      'url' => '',
+      'label' => ''
    ]
 ];
 
@@ -52,7 +48,7 @@ $footer_contacts = [
    ],
    [
       'url' => "mailto:{$COMPANY_EMAIL}",
-      'label' => "+{$COMPANY_EMAIL}",
+      'label' => "{$COMPANY_EMAIL}",
       'icon' => 'fluent:mail-20-regular'
    ]
 ]

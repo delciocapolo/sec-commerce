@@ -14,7 +14,7 @@ $menus = [
    ],
    [
       'label' => 'Sobre',
-      'url' => '/about'
+      'url' => '/sobre'
    ]
 ];
 ?>
