@@ -59,7 +59,7 @@ $team_member = [
 ?>
 
 <main class="p-3">
-   <!-- HEADER -->
+   <!-- HERO -->
    <section id="header-homepage mb-10">
       <header class="w-full h-23"></header>
       <div class="relative min-h-[calc(100vh-92px)]">
@@ -102,6 +102,8 @@ $team_member = [
          </div>
       </div>
    </section>
+
+   <!-- MEMBER TEAM CARDS -->
    <section class="mb-10">
       <div class="container mx-auto">
          <div class="w-full h-full">
@@ -137,6 +139,7 @@ $team_member = [
       </div>
    </section>
 
+   <!-- VISION AND MISSION -->
    <section class="">
       <div class="container mx-auto">
          <div class="w-full h-full">
