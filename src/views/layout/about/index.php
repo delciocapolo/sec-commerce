@@ -155,7 +155,7 @@ $team_member = [
                   <div class="p-5 overflow-hidden rounded-xl bg-(--primary-200) shadow-[0_0_0_1px_rgba(51,51,51,0.2)]">
                      <h1 class="text-(--primary-700) text-lg font-semibold mb-3">Nossa Missão</h1>
                      <h2 class="text-(--gray-900) text-2xl font-medium mb-2">É entregar soluções de segurança digital de alta qualidade.</h2>
-                     <p class="text-(--gray-700) text-sm">Buscamos constantemente inovar e aprimorar nossos serviços, garantindo a máxima proteção para nossos clientes. Deixando a segurança em primeiro lugar.</p>
+                     <p class="text-(--gray-500) text-sm">Buscamos constantemente inovar e aprimorar nossos serviços, garantindo a máxima proteção para nossos clientes. Deixando a segurança em primeiro lugar.</p>
                   </div>
                </div>
             </div>
