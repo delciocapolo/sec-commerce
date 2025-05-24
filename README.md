@@ -13,3 +13,7 @@
 1. products
 1.1 /
 1.2 /{id}
+
+
+# Notes
+grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))]
