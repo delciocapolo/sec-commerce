@@ -3,7 +3,7 @@ define("BASE_PATH", __DIR__);
 
 // CORE CONFIG
 require_once "src/api/config/environment.php";
-// require_once "src/api/config/database.php";
+require_once "src/api/config/database.php";
 
 // WEB CONFIG
 require_once "src/views/constants/global.php";

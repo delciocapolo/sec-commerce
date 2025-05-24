@@ -59,7 +59,7 @@ $services = [
    <section id="about" class="mt-24">
       <div class="container m-auto">
          <div class="">
-            <?= TitleComponent(['title' => 'Quem somos', 'subtitle' => 'Saiba sobre os nossos valores e o propósito de existirmos.', 'url_section' => 'about']) ?>
+            <?= TitleComponent(['title' => 'Quem somos', 'subtitle' => 'Saiba sobre os nossos valores e o propósito de existirmos.', 'url_section' => 'sobre']) ?>
             <div class="my-8 flex flex-wrap gap-7">
                <div class="flex-1 p-0.5 rounded-sm border-4 border-double border-(--gray-300) h-fit">
                   <img
@@ -105,7 +105,7 @@ $services = [
          <div class="">
             <?= TitleComponent(['title' => 'Conheça nossos produtos', 'subtitle' => 'Confira alguns dos melhores produtos.']) ?>
             <nav class="flex flex-wrap my-8 h-[35rem] gap-5">
-               <div class="flex-none flex items-end w-[30.35rem] h-full bg-(--primary-100) rounded-sm p-7 relative bg-[url(https://images.unsplash.com/photo-1706454566473-d5ca521ea8cb?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-center bg-no-repeat bg-cover shadow-sm">
+               <div class="flex-1 flex items-end lg:max-w-[30.35rem] min-w-sm h-full bg-(--primary-100) rounded-sm p-7 relative bg-[url(https://images.unsplash.com/photo-1706454566473-d5ca521ea8cb?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-center bg-no-repeat bg-cover shadow-sm">
                   <div class="flex flex-col justify-between w-full min-h-1/2 bg-(--primary-200) rounded-sm p-5">
                      <div class="">
                         <h1 class="text-[1.55rem] leading-8 mb-2 text-(--primary-900) font-bold">A sua segurança, nossa prioridade.</h1>
@@ -116,14 +116,14 @@ $services = [
                      </div>
                   </div>
                </div>
-               <div class="flex-1 grid grid-cols-3 gap-5">
+               <nav class="flex-1 min-w-sm grid grid-cols-3 gap-5" role="list">
                   <?= CardProduct() ?>
                   <?= CardProduct() ?>
                   <?= CardProduct() ?>
                   <?= CardProduct() ?>
                   <?= CardProduct() ?>
                   <?= CardProduct() ?>
-               </div>
+               </nav>
             </nav>
          </div>
       </div>

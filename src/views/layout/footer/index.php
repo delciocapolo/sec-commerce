@@ -54,15 +54,15 @@ $footer_contacts = [
 ]
 ?>
 
-<footer class="w-full bg-(--primary-900) mt-24 py-5">
+<footer class="w-full bg-(--primary-900) mt-24 px-3 py-5">
    <div class="container m-auto">
       <div class="flex flex-wrap mb-8">
-         <div class="flex-1 min-w-xs">
+         <div class="flex-1 min-w-xs md:mb-8">
             <h1 class="mb-2 text-(--white-100) text-2xl font-medium"><?= $COMPANY_NAME ?></h1>
             <p class="text-(--gray-300) text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro natus autem, ad numquam quasi veritatis eos aliquid voluptas voluptatum provident quaerat at animi perspiciatis quibusdam velit id! Mollitia, necessitatibus corrupti.</p>
          </div>
          <div class="flex-1 min-w-xs">
-            <ul class="flex justify-end gap-3" role="list">
+            <ul class="flex justify-start md:justify-end gap-3" role="list">
                <?php foreach ($social_media as $media): ?>
                   <li class="group" role="listitem">
                      <a href="<?= $media['url'] ?>" target="_blank" rel="noopener noreferrer" class="py-2 px-2 rounded-sm flex justify-center items-center group-hover:bg-(--primary-800) duration-300">
@@ -89,7 +89,7 @@ $footer_contacts = [
             <?php endforeach; ?>
          </div>
          <div class="flex-1 min-w-xs">
-            <div class="w-full flex">
+            <div class="w-full flex flex-wrap">
                <div class="flex-1">
                   <div>
                      <h1 class="block uppercase text-md font-medium text-(--white-100)">Menu rápido</h1>
