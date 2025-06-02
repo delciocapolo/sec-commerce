@@ -1,9 +1,13 @@
 <?php
+// DEFINE THE BASE FOR THE APPLICATION
 define("BASE_PATH", __DIR__);
+require_once "src/routes/web.php";
 
 // CORE CONFIG
 require_once "src/api/config/environment.php";
 require_once "src/api/config/database.php";
+require_once "src/views/cookies/handler.php";
+require_once "src/routes/handler.php";
 
 // WEB CONFIG
 require_once "src/views/constants/global.php";
@@ -31,11 +35,19 @@ require_once "src/views/components/index.php";
 
 <body>
 
-   <?php require_once "src/views/layout/header/index.php"; ?>
+   <?php
+   if (getRootRoute() !== 'dashboard') {
+      require_once "src/views/layout/header/index.php";
+   }
+   ?>
 
-   <?php require_once "src/routes/handler.php"; ?>
+   <?php handleWebRoutes($web_routes); ?>
 
-   <?php require_once "src/views/layout/footer/index.php"; ?>
+   <?php
+   if (getRootRoute() !== 'dashboard') {
+      require_once "src/views/layout/footer/index.php";
+   }
+   ?>
 
 </body>
 
