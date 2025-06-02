@@ -6,11 +6,11 @@ $menus = [
    ],
    [
       'label' => 'Loja',
-      'url' => '/shop'
+      'url' => '/loja'
    ],
    [
       'label' => 'Serviços',
-      'url' => '/services'
+      'url' => '/servicos'
    ],
    [
       'label' => 'Sobre',
