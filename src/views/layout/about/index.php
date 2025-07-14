@@ -21,46 +21,52 @@ $cards_about = [
 $team_member = [
    [
       'name' => 'Adão Cabila',
-      'role' => 'Desenvolvedor Backend',
-      'image' => 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'linkedin' => 'http://'
+      'role' => 'Desenvolvedor Fullstack',
+      'image' => 'https://scontent.flad4-1.fna.fbcdn.net/v/t39.30808-6/461896642_2396659427336931_807557863395107608_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEBLXxbAfJIzr82fPTMxLATbSFPKGtNg7FtIU8oa02Dsc1yB0E52NqJxK6RkO9Sn9ni60oOsbaJk6BO-TmV7Hci&_nc_ohc=5MogDa3aZjwQ7kNvwF_aURH&_nc_oc=Adn9JzBhIYfjO1zhldeKMVJF3pX8IdGb7PQYQq-0jPMlWC30-n68Klu8q5FIqIiX27ZrlXsvcaRpRMVkp6y2yvFS&_nc_zt=23&_nc_ht=scontent.flad4-1.fna&_nc_gid=aU6Wr_51LyXVsP4kkKBDBA&oh=00_AfN8yrycyD4-kKc2WCNsyHo5v2tq3R9m-3LHZqzr68enUw&oe=685168EB',
+      'icon' => 'ri:facebook-fill', // 'ri:linkedin-fill',
+      'profile_url' => 'https://www.facebook.com/adao.leonardolemba'
    ],
    [
       'name' => 'Maria Silva',
       'role' => 'Gerente de Projetos',
-      'image' => 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'linkedin' => 'http://'
+      'image' => '', // https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      'icon' => 'radix-icons:value-none',
+      'profile_url' => ''
    ],
-   [
-      'name' => 'João Pereira',
-      'role' => 'Especialista em Segurança',
-      'image' => 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'linkedin' => 'http://'
-   ],
-   [
-      'name' => 'Ana Costa',
-      'role' => 'Designer Gráfico',
-      'image' => 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'linkedin' => 'http://'
-   ],
-   [
-      'name' => 'Carlos Mendes',
-      'role' => 'Técnico de Instalação',
-      'image' => 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'linkedin' => 'http://'
-   ],
-   [
-      'name' => 'Sofia Almeida',
-      'role' => 'Analista de Marketing',
-      'image' => 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'linkedin' => 'http://'
-   ]
+   // [
+   //    'name' => 'João Pereira',
+   //    'role' => 'Especialista em Segurança',
+   //    'image' => '',
+   //    'icon' => 'radix-icons:value-none',
+   //    'profile_url' => ''
+   // ],
+   // [
+   //    'name' => 'Ana Costa',
+   //    'role' => 'Designer Gráfico',
+   //    'image' => '',
+   //    'icon' => 'radix-icons:value-none',
+   //    'profile_url' => ''
+   // ],
+   // [
+   //    'name' => 'Carlos Mendes',
+   //    'role' => 'Técnico de Instalação',
+   //    'image' => '',
+   //    'icon' => 'radix-icons:value-none',
+   //    'profile_url' => ''
+   // ],
+   // [
+   //    'name' => 'Sofia Almeida',
+   //    'role' => 'Analista de Marketing',
+   //    'image' => '',
+   //    'icon' => 'radix-icons:value-none',
+   //    'profile_url' => ''
+   // ]
 ];
 ?>
 
 <main class="p-3">
    <!-- HERO -->
-   <section id="header-homepage mb-10">
+   <section class="mb-10" id="header-homepage">
       <header class="w-full h-23"></header>
       <div class="relative min-h-[calc(100vh-92px)]">
          <div class="container m-auto h-full">
@@ -104,7 +110,7 @@ $team_member = [
    </section>
 
    <!-- MEMBER TEAM CARDS -->
-   <section class="mb-10">
+   <section class="mb-10" id="team-member">
       <div class="container mx-auto">
          <div class="w-full h-full">
             <div class="mb-10">
@@ -123,9 +129,9 @@ $team_member = [
                            <p1 class="block text-(--gray-500) text-sm"><?= $member['role'] ?></p1>
                         </div>
                         <div class="flex-none flex- items-center justify-center w-1/6 bg-red-500 overflow-hidden rounded-md">
-                           <a href="<?= $member['linkedin'] ?>" target="_blank" rel="noopener noreferrer" class="bg-(--primary-900) flex items-center justify-center h-full">
+                           <a href="<?= empty($member['profile_url']) ? '#team-member' : $member['profile_url'] ?>" target="<?= empty($member['profile_url']) ? '_self' : '_blank' ?>" rel="noopener noreferrer" class="bg-(--primary-900) flex items-center justify-center h-full">
                               <?= IconifyComponent([
-                                 'name' => 'ri:linkedin-fill',
+                                 'name' => $member['icon'],
                                  'size' => '30',
                                  'style' => 'text-(--white-100)'
                               ]) ?>
