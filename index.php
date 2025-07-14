@@ -3,15 +3,18 @@
 define("BASE_PATH", __DIR__);
 require_once "src/routes/web.php";
 
-// CORE CONFIG
-require_once "src/api/config/environment.php";
-require_once "src/api/config/database.php";
-require_once "src/views/cookies/handler.php";
-require_once "src/routes/handler.php";
-
 // WEB CONFIG
 require_once "src/views/constants/global.php";
 require_once "src/views/components/index.php";
+
+// CORE CONFIG
+require_once "src/api/index.php";
+require_once "src/views/helpers/cookies.php";
+require_once "src/routes/renderer.php";
+
+// API CONFIG
+header('Access-Controll-Allow-Origin: *');
+date_default_timezone_set('Africa/Luanda');
 ?>
 
 <!DOCTYPE html>
