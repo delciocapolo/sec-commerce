@@ -1,13 +1,20 @@
 <?php
+// DEFINE THE BASE FOR THE APPLICATION
 define("BASE_PATH", __DIR__);
-
-// CORE CONFIG
-require_once "src/api/config/environment.php";
-require_once "src/api/config/database.php";
+require_once "src/routes/web.php";
 
 // WEB CONFIG
 require_once "src/views/constants/global.php";
 require_once "src/views/components/index.php";
+
+// CORE CONFIG
+require_once "src/api/index.php";
+require_once "src/views/helpers/cookies.php";
+require_once "src/routes/renderer.php";
+
+// API CONFIG
+header('Access-Controll-Allow-Origin: *');
+date_default_timezone_set('Africa/Luanda');
 ?>
 
 <!DOCTYPE html>
@@ -31,11 +38,19 @@ require_once "src/views/components/index.php";
 
 <body>
 
-   <?php require_once "src/views/layout/header/index.php"; ?>
+   <?php
+   if (getRootRoute() !== 'dashboard') {
+      require_once "src/views/layout/header/index.php";
+   }
+   ?>
 
-   <?php require_once "src/routes/handler.php"; ?>
+   <?php handleWebRoutes($web_routes); ?>
 
-   <?php require_once "src/views/layout/footer/index.php"; ?>
+   <?php
+   if (getRootRoute() !== 'dashboard') {
+      require_once "src/views/layout/footer/index.php";
+   }
+   ?>
 
 </body>
 
