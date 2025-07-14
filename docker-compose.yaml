@@ -30,11 +30,12 @@ services:
       dockerfile: docker/php/Dockerfile
     container_name: sec-commerce-php
     restart: always
+    hostname: app
     tty: true
     volumes:
       - ./:/var/www
     ports:
-      - 8000:8000
+      - ${SERVER_PORT}:${SERVER_PORT}
     env_file:
       - path: ./.env
         required: true
@@ -42,9 +43,27 @@ services:
       - mysql
     networks:
       - sec-commerce-app
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: sec-commerce-reverse-tunnel
+    restart: always
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    ports:
+      - 4040:4040
+    command:
+      - "http"
+      - "http://app:${SERVER_PORT}"
+    networks:
+      - sec-commerce-app
+    depends_on:
+      - app
+
 volumes:
   volume-sec-commerce-db:
     driver: local
+
 networks:
   sec-commerce-app:
     driver: bridge
