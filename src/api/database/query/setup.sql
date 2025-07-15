@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
     `nome` VARCHAR(300) NOT NULL,
     `email` VARCHAR(300) NOT NULL,
+    `password` VARCHAR(300) NOT NULL,
     `funcao_id` INT NOT NULL,
     `criado_em` DATETIME DEFAULT(NOW()),
     `atualizado_em` DATETIME DEFAULT(NULL),
