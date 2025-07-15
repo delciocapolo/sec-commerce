@@ -66,7 +66,7 @@ class HttpMethod
     * 
     *
     * @param string $route
-    * @param callable $callback { requestBody: mixed, params: string[], queryParams: string[] }
+    * @param callable{requestBody: mixed, params: string[], queryParams: string[]} $callback
     * @return void
     */
    public static function POST(string $route, $callback)
