@@ -1,6 +1,8 @@
 <?php
 // DEFINE THE BASE FOR THE APPLICATION
 define("BASE_PATH", __DIR__);
+define("API_PATH", __DIR__ . '/src/api');
+
 require_once "src/routes/web.php";
 
 // WEB CONFIG
@@ -14,6 +16,7 @@ require_once "src/routes/renderer.php";
 
 // API CONFIG
 header('Access-Controll-Allow-Origin: *');
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 date_default_timezone_set('Africa/Luanda');
 ?>
 
