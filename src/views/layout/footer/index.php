@@ -54,7 +54,7 @@ $footer_contacts = [
 ]
 ?>
 
-<footer class="w-full bg-(--primary-900) mt-24 px-3 py-5">
+<footer class="w-full bg-(--primary-900) mt-12 px-3 py-5">
    <div class="container m-auto">
       <div class="flex flex-wrap mb-8">
          <div class="flex-1 min-w-xs md:mb-8">

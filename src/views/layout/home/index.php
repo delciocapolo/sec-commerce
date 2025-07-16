@@ -1,4 +1,6 @@
 <?php
+global $COMPANY_NAME;
+
 $menus_header = [
    [
       'label' => 'Quem somos',
@@ -55,33 +57,12 @@ $services = [
       </div>
    </section>
 
-   <!-- ABOUT -->
-   <section id="about" class="mt-24 p-3">
-      <div class="container m-auto">
-         <div class="">
-            <?= TitleComponent(['title' => 'Quem somos', 'subtitle' => 'Saiba sobre os nossos valores e o propósito de existirmos.', 'url_section' => 'sobre']) ?>
-            <div class="my-8 flex flex-wrap gap-7">
-               <div class="flex-1 p-0.5 rounded-sm border-4 border-double border-(--gray-300) min-w-xs h-fit">
-                  <img
-                     src="https://images.unsplash.com/photo-1617897711385-df9c86b7dfe3?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                     alt=""
-                     class="object-cover rounded-sm">
-               </div>
-               <div class="flex-1 text-justify">
-                  <p class="text-(--gray-800) text-base ">Na Mateus & Segurança, acreditamos que a proteção do seu patrimônio e da sua família não deve ser complicada nem inacessível. Somos uma empresa nova no mercado, mas trazemos connosco uma missão clara: oferecer soluções confiáveis, acessíveis e modernas em dispositivos de segurança para residências, empresas e espaços comerciais.</p>
-                  <p class="text-(--gray-800) text-base mt-5">Trabalhamos com equipamentos de alta qualidade — como câmeras de vigilância, alarmes, sensores de movimento e fechaduras eletrônicas — sempre com foco no que mais importa: a sua tranquilidade.</p>
-                  <p class="text-(--gray-800) text-base mt-5">Nosso compromisso é ser mais do que apenas um fornecedor. Queremos ser o seu parceiro na construção de um ambiente seguro, com atendimento próximo, transparente e orientado para a confiança. Começamos pequenos, mas com grandes objetivos e a dedicação de quem sabe que segurança é coisa séria.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
    <!-- SERVICES -->
-   <section id="services" class="mt-24 p-3">
+   <section id="services" class="mt-24 px-3 py-10">
       <div class="container m-auto">
          <div class="">
             <?= TitleComponent(['title' => 'Nossos serviços', 'subtitle' => 'Alguns dos nossos serviços incluem.', 'url_section' => 'servicos']) ?>
+
             <nav class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-4 md:gap-10 my-8 min-h-62">
                <?php foreach ($services as $service): ?>
                   <div class="flex flex-col justify-center p-5 w-full rounded-sm shadow-(--box-shadow-50)">
@@ -99,8 +80,18 @@ $services = [
       </div>
    </section>
 
+   <!-- ADS BOARD -->
+   <section class="mt-24 px-3">
+      <div class="container m-auto overflow-hidden rounded-sm">
+         <video class="w-full bg-(--primary-300)" controls>
+            <source src="/public/barner.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+         </video>
+      </div>
+   </section>
+
    <!-- PRODUCTS -->
-   <section id="products" class="mt-24 p-3">
+   <section id="products" class="mt-24 px-3">
       <div class="container m-auto">
          <div class="">
             <?= TitleComponent(['title' => 'Conheça nossos produtos', 'subtitle' => 'Confira alguns dos melhores produtos.', 'url_section' => 'loja']) ?>
@@ -122,6 +113,59 @@ $services = [
                   <?= CardProduct(['hover' => false]) ?>
                </nav>
             </nav>
+         </div>
+      </div>
+   </section>
+
+   <!-- ABOUT -->
+   <section id="about" class="mt-24 px-3 py-10">
+      <div class="container m-auto">
+         <div class="">
+            <div class="my-8 flex flex-wrap gap-15 px-12">
+               <div class="flex-1 rounded-sm overflow-hidden min-w-xs h-fit">
+                  <img
+                     src="/public/team.png"
+                     alt=""
+                     class="object-cover aspect-2/1 rounded-sm">
+               </div>
+               <div class="flex-1 flex flex-col gap-3 text-justify">
+                  <div class="">
+                     <h1 class="leading-10 mb-3 font-bold text-3xl capitalize text-(--primary-900)">Quem somos</h1>
+                     <p class="text-(--gray-800) text-md text-justify">Na <?= $COMPANY_NAME ?> acreditamos que a proteção do seu patrimônio e da sua família não deve ser complicada nem inacessível. Somos uma empresa nova no mercado, mas trazemos connosco uma missão clara: oferecer soluções confiáveis, acessíveis e modernas em dispositivos de segurança para residências, empresas e espaços comerciais.
+                        Trabalhamos com equipamentos de alta qualidade — como câmeras de vigilância, alarmes, sensores de movimento e fechaduras eletrônicas — sempre com foco no que mais importa: a sua tranquilidade. Nosso compromisso é ser mais do que apenas um fornecedor.
+                     </p>
+                     <br>
+                     <p class="text-(--gray-800) text-md text-justify">
+                        Queremos ser o seu parceiro na construção de um ambiente seguro, com atendimento próximo, transparente e orientado para a confiança. Começamos pequenos, mas com grandes objetivos e a dedicação de quem sabe que segurança é coisa séria.
+                     </p>
+                  </div>
+                  <div class="my-3">
+                     <a href="/sobre" target="_self" rel="noopener noreferrer" class="flex items-center gap-1 hover:gap-3 duration-300 leading-11 pr-5 rounded-sm text-(--primary-900) w-fit">
+                        <span class="text-base font-medium">Ver mais</span>
+                        <span class="iconify" data-icon="mynaui:arrow-right" data-width="30" data-height="30"></span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="news-letter" class="mt-24 px-3">
+      <div class="container m-auto">
+         <h1 class="block text-center text-2xl text-(--primary-900) font-medium">Receba notícia sobre as novidades</h1>
+         <p class="block text-center text-md font-base">Fique por dentro das últimas novidades em segurança e proteja o que mais importa com dicas, ofertas e lançamentos exclusivos.</p>
+         <div class="w-3/4 m-auto mt-10">
+            <div class="flex items-center">
+               <div class="flex-none size-16 overflow-hidden rounded-l-lg bg-(--primary-900)">
+                  <label for="" class="flex items-center justify-center w-full h-full">
+                     <?= IconifyComponent(['name' => 'streamline:send-email-remix', 'style' => 'text-(--white-100)']) ?>
+                  </label>
+               </div>
+               <div class="flex-1 h-full rounded-r-lg overflow-hidden">
+                  <input type="text" name="" id="" class="w-full h-16 px-3 text-md font-medium bg-(--primary-200) " placeholder="Seu Email">
+               </div>
+            </div>
          </div>
       </div>
    </section>
