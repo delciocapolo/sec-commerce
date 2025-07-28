@@ -2,7 +2,7 @@
 
 class CookieHandler
 {
-   public function has(string $name): bool
+   public static function has(string $name): bool
    {
       return isset($_COOKIE[$name]);
    }
@@ -15,7 +15,7 @@ class CookieHandler
     * @param integer $expires - the value must be in days
     * @return void
     */
-   public function set(
+   public static function set(
       string $name,
       string $value = "",
       int $expires = 1,
@@ -28,14 +28,14 @@ class CookieHandler
       setcookie($name, $value, $expires_at, $path, $domain, $secure, $httponly);
    }
 
-   public function get(string $name)
+   public static function get(string $name)
    {
       return isset($_COOKIE[$name]) ? $_COOKIE[$name] : null;
    }
 
-   public function delete(string $name, string $path = '/', string $domain = '')
+   public static function delete(string $name, string $path = '/', string $domain = '')
    {
-      if ($this->has($name)) {
+      if (self::has($name)) {
          $expires_at = time() - 3600;
          setcookie($name, '', $expires_at, $path, $domain);
          unset($_COOKIE[$name]);
@@ -47,10 +47,10 @@ class CookieHandler
     *
     * @return void
     */
-   public function destroy()
+   public static function destroy()
    {
       foreach ($_COOKIE as $name) {
-         $this->set($name, '', time() * 3600);
+         self::set($name, '', time() * 3600);
          unset($_COOKIE[$name]);
       }
    }
@@ -60,5 +60,3 @@ class CookieHandler
       return $_COOKIE;
    }
 }
-
-$cookieHandler = new CookieHandler();

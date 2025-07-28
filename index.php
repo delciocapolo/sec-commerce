@@ -41,13 +41,6 @@ date_default_timezone_set('Africa/Luanda');
 </head>
 
 <body>
-
-   <?php
-   if (getRootRoute() !== 'dashboard') {
-      require_once "src/views/layout/header/index.php";
-   }
-   ?>
-
    <?php handleWebRoutes($web_routes); ?>
 
    <?php

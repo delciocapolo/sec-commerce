@@ -1,88 +1,45 @@
 <?php
 
-function computeRating(int $reviews, int $totalStars, int $confidenceConstant = 10, float $globalAverageRating = 4.0): float
-{
-   if ($reviews > 0) {
-      $rating = (($confidenceConstant * $globalAverageRating) + $totalStars) /
-         ($confidenceConstant + $reviews);
-      return round($rating, 1);
-   }
-
-   return $globalAverageRating;
-}
-
+/**
+ * Product Card Component
+ *
+ * @param array{name:string,image_path:string,price:int,description:string} $props
+ * @return void
+ */
 function CardProduct(array $props = [])
 {
    $defaults = [
-      'square' => false,
-      'image_path' => '/public/security-cameras-different-positions.png',
       'name' => 'Camera de vigilancia',
-      'price' => 250000,
-      'reviews' => 10,
-      'totalStars' => 15,
-      'tags' => [
-         'Vigilância',
-         'Monitoramento'
-      ],
-      'hover' => true
+      'image_path' => '/public/security-cameras-different-positions.png',
+      'price' => 25000,
+      'description' => ''
    ];
 
    $props = array_merge($defaults, $props);
-   $tagsHtml = '';
-   $hoverClass = $props['hover'] === true ? 'hover:scale-110' : '';
-   $rating = computeRating($props['reviews'], $props['totalStars']);
-   $card_square = $props['square'] ? "aspect-square" : "min-w-xs max-h-[560px]";
 
-   foreach ($props['tags'] as $tag) {
-      $tagsHtml .= <<<HTML
-         <span class="rounded-full mb-2 block px-4 py-0.5 text-(--primary-700) bg-(--primary-100) ring font-[450] text-center">{$tag}</span>
-      HTML;
-   }
-
-   $template = <<<HTML
-      <div class="group hover:p-2 {$hoverClass} hover:border border-(--gray-900) bg-(--white-100) rounded-sm {$card_square} duration-200 cursor-pointer overflow-hidden">
-         <div class="w-full h-full rounded-md bg-(--primary-200) relative overflow-hidden">
-            <div class="w-full h-full">
+   return <<<HTML
+      <div class="group flex-1 flex min-h-52 min-w-md max-w-lg overflow-hidden rounded-sm border-2 border-(--primary-900) bg-(--white-100)">
+         <div class="flex-1 flex items-center justify-center overflow-hidden">
+            <div class=" rounded-lg overflow-hidden p-5 flex items-center justify-center bg-[#F8F9FA]">
                <img 
-                  src="{$props['image_path']}"
-                  alt="" 
-                  class="object-cover aspect-2/3"
-               >
+                  src="/public/products/1.png" 
+                  alt="Product {$props['name']}" 
+                  class="aspect-1/1 object-cover">
             </div>
-            <div class="absolute bottom-0 left-0 w-full h-full grid grid-rows-2 p-3">
-               <div class="flex justify-between w-full">
-                  <p class="text-sm">
-                     {$tagsHtml}
-                  </p>
+         </div>
+         <div class="flex-1">
+            <div class="w-full h-full flex flex-col justify-center items-start gap-1 relative">
+               <span class=""><b>Nome do producto:</b> DS-2CD2H23G2-IZS</span>
+               <div class="flex items-center justify-center gap-1">
+                  <b class="">Preço:</b>
+                  <span class="aoa-format">25000</span>
                </div>
-               <div class="w-full h-full relative">
-                  <div class="w-full h-fit absolute -bottom-18 group-hover:-translate-y-18 duration-300 group-hover:">
-                     <div class="mb-5 border border-(--primary-700) w-full p-4 overflow-hidden rounded-lg bg-(--white-100) flex flex-col justify-start gap-1">
-                        <div class="">
-                           <h3 class="text-md font-[450]">{$props['name']}</h3>
-                        </div>
-                        <div class="flex gap-1 items-end">
-                           <span class="iconify text-[#F19915]" data-icon="ic:round-star" data-width="25" data-height="25"></span>
-                           <span class="text-(--gray-900) text-sm">{$rating}</span>
-                           <span class="text-(--gray-400) text-sm">({$props['reviews']} Avaliações)</span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                           <h3 class="text-md font-[450] aoa-format">{$props['price']}</h3>
-                           <del class="text-sm text-(--gray-400) aoa-format">30000</del>
-                        </div>
-                     </div>
-                     <div class="w-full h-full relative">
-                        <button type="button" class="flex items-center justify-center gap-2 w-full py-3 bg-(--primary-700) rounded-md text-(--white-100) text-md">
-                           <span class="iconify" data-icon="proicons:cart" data-width="25" data-height="25"></span>
-                           Adicionar no carrinho
-                        </button>
-                     </div>
-                  </div>
+               <span class=""><b>Descrição do producto:</b> 2MP, Motorized Varifocal Lens</span>
+               <div class="absolute -bottom-10 right-3 group-hover:-translate-y-12 duration-300">
+                  <button class="bg-(--primary-900) text-(--white-100) font-medium px-3 py-2 rounded-sm">Ver agora</button>
                </div>
             </div>
          </div>
       </div>
    HTML;
-
-   return $template;
 }

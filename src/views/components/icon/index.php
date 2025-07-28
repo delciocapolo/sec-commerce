@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Return a iconify icon
+ *
+ * @param array{name:string,size:int=30,style:string} $props
+ * @return string
+ */
 function IconifyComponent(array $props = []): string
 {
    if (empty($props['name'])) {
